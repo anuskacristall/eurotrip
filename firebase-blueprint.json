@@ -1,0 +1,58 @@
+{
+  "entities": {
+    "PlannerData": {
+      "title": "PlannerData",
+      "description": "User personal trip planner data including settings, incomes, fixed costs, expenses, exchanges and checklist",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Owner user ID"
+        },
+        "settings": {
+          "type": "object",
+          "description": "Trip parameters and goals"
+        },
+        "incomes": {
+          "type": "array",
+          "description": "List of user incomes"
+        },
+        "fixedCosts": {
+          "type": "array",
+          "description": "List of user fixed costs"
+        },
+        "expenses": {
+          "type": "array",
+          "description": "List of expenses incurred during trip"
+        },
+        "exchanges": {
+          "type": "array",
+          "description": "List of currency exchanges"
+        },
+        "checklist": {
+          "type": "array",
+          "description": "List of checklist items to buy before trip"
+        },
+        "customIncomeCategories": {
+          "type": "array",
+          "description": "Custom income categories defined by user"
+        },
+        "manualEurAdded": {
+          "type": "number",
+          "description": "Manual euros added"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Timestamp of last update"
+        }
+      },
+      "required": ["settings", "incomes"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}/planner/{plannerId}": {
+      "schema": "PlannerData",
+      "description": "Stores private planner data belonging exclusively to the authenticated user"
+    }
+  }
+}

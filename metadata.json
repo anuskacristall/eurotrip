@@ -1,0 +1,6 @@
+{
+  "name": "EuroTrip Planner - Controle Financeiro & Diário de Viagem",
+  "description": "Planejamento financeiro pré-viagem (R$ para €) e diário de gastos em tempo real durante viagem à Europa com integração com câmbio Wise e metas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
